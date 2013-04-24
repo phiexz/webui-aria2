@@ -1,4 +1,5 @@
-$.getJSON('disk.json', function(diskSize) {
+function diskStatus(){
+    $.getJSON('disk.json', function(diskSize) {
 	var satuan_size="Kb";
 	var satuan_used="kb";
 	var percentageColor;
@@ -43,4 +44,10 @@ $.getJSON('disk.json', function(diskSize) {
 			      
 	document.getElementById("diskFreePercentage").innerHTML=diskFreePercentage;
 	document.getElementById("diskStatOutput").innerHTML=diskStatOutput;
-  });
+    });
+}
+
+$(document).ready(function(){
+  diskStatus();
+  var int=self.setInterval(function(){diskStatus()},60000);
+}); 
