@@ -4,8 +4,7 @@
 }
 @media (min-width: 980px) {
   body {
+    background-image:url('/img/qwe.jpg');
     padding-top: 60px;
   }
 }
-
-
