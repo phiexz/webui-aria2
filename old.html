@@ -30,6 +30,9 @@
 	<script src="js/old/aria2_settings.js"></script>
 	<script src="js/old/utils.js"></script>
 	<script src="js/old/connection.js"></script>
+	
+	<!-- get disk size -->
+	<script src="js/old/disksize.js"></script>
 
 
 	<!-- {{{ css styles -->
@@ -453,6 +456,13 @@
 						<i class="icon-info-sign"></i> About</a></li>
 				</ul>
 			</li>
+		</ul>
+		
+		<ul class="nav pull-right">
+			<div id="diskFreePercentage">class="p-bar p-bar-color p-bar-stripes">
+			    <span style="width: 40%"></span>
+			</div>
+			<font color="#fff" size="1"><div id="diskStatOutput"></div></font>
 		</ul>
 		</div><!--/.nav-collapse -->
 	</div>
