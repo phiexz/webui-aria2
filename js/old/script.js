@@ -669,10 +669,10 @@ function empty_download_set(elem) {
 	len += d_files.waiting.length;
 	len += d_files.stopped.length;
 	if(len === 0) {
-		var html = '<div class="hero-unit"><h3>';
+		var html = '<div class="hero-unit"><center><h3>';
 
-		html += 'Currently no downloads in line to display, use the Add download button to start downloading files!';
-		html += '</h3></div>';
+		html += 'No Active Download';
+		html += '</h3></center></div>';
 		$(elem).html(html);
 	}
 }
