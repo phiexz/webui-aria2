@@ -307,6 +307,11 @@ function newDownload() {
 	addDownload([urls]);
 }
 
+function linkDownloaded() {
+	var newURL = window.location.protocol + "//" + window.location.host + "/files"
+	location.href=newURL;
+}
+
 var d_files = {
 	active: [],
 	waiting: [],
