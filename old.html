@@ -33,23 +33,23 @@
         
         <!-- get disk size -->
         <script src="js/old/disksize.js"></script>
-		
-		<!-- init dialog popup -->
-	<link rel="stylesheet" href="http://code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css" />
-		<script src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
-		<script>
-		  $(function() {
-			$( "#dialog-popup" ).dialog({
-			  modal: true,
-			  width: 425,
-			  buttons: {
-				Ok: function() {
-				  $( this ).dialog( "close" );
-				}
-			  }
-			});
-		  });
-		 </script>
+    
+    <!-- init dialog popup -->
+  <link rel="stylesheet" href="http://code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css" />
+    <script src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
+    <script>
+      $(function() {
+      $( "#dialog-popup" ).dialog({
+        modal: true,
+        width: 425,
+        buttons: {
+        Ok: function() {
+          $( this ).dialog( "close" );
+        }
+        }
+      });
+      });
+     </script>
 
 
         <!-- {{{ css styles -->
@@ -404,15 +404,12 @@
 <body>
 
 <!-- init popup dialog -->
-<div style="font-size: 80%;" id="dialog-popup" title="NOTICE: AUTO DELETED FILES">
-  <p>
-    <span class="ui-icon ui-icon-alert" style="float: left; margin: 0 7px 50px 0;"></span>
-    <b><font color="red">Fitur baru dalam tahap uji coba:</font></b><br />Files akan otomatis terhapus setelah <b>3 hari</b> masuk ke server.</p>
-	<p>Jika anda mendownload file besar & membutuhkan waktu lebih dari 3 hari untuk mendownloadnya. silakan kasi tau ane</p>
-  </p>
-  <p>
-    daftar file yg tidak otomatis dihapus bisa dilihat <a href="/files/EXCLUDE-DELETE.txt"><b><font color="blue">disini</font></b></a>
-  </p>
+<div style="font-size: 80%;" id="dialog-popup" title="NOTICE: PLEASE READ">
+    <p><span class="ui-icon ui-icon-alert" style="float: left; margin: 0 7px 50px 0;"></span>
+    <b><font color="red">Limited access ke /files direktori:</font></b><br />Membutuhkan id untuk mengakses files yang telah terdownload. Hubungi admin untuk info lebih lanjut</p>
+    </br>
+    <p><span class="ui-icon ui-icon-alert" style="float: left; margin: 0 7px 50px 0;"></span>
+    <b><font color="red">Auto Delete file:</font></b><br />Fitur auto delete file telah diaktifkan kembali. file akan otomatis terhapus setelah <b>3 Hari</b> masuk ke server</p>
 </div>
 <!-- {{{ top nav bar -->
 <div class="navbar navbar-inverse navbar-fixed-top">
