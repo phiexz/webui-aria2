@@ -1,34 +1,11 @@
 function diskStatus(){
-    $.getJSON('disk.json', function(diskSize) {
-	var satuan_size="Kb";
-	var satuan_used="kb";
-	var percentageColor;
+    $.getJSON('status.json', function(serverStats) {
 	
-	var disk_usage_percentage=(diskSize.used)/diskSize.size*100
-	if (diskSize.size > 1024){
-		diskSize.size=diskSize.size/1024
-		satuan_size="Mb";
-		
-		if (diskSize.size > 1024){
-		    diskSize.size=diskSize.size/1024
-		    satuan_size="Gb";
-		}
-	}
-	
-	if (diskSize.used > 1024){
-		diskSize.used=diskSize.used/1024
-		satuan_used="Mb";
-		
-		if (diskSize.used > 1024){
-		    diskSize.used=diskSize.used/1024
-		    satuan_used="Gb";
-		}
-	}
-	
-	if (disk_usage_percentage <= 33){
+	/* Statusbar Color */
+	if (serverStats.disk_p <= 33){
 		percentageColor="#61b832";
 	}
-	else if (disk_usage_percentage >= 66){
+	else if (serverStats.disk_p >= 66){
 		percentageColor="#de4343";
 	}
 	else{
@@ -36,11 +13,11 @@ function diskStatus(){
 	}
 	
 	var diskFreePercentage = '<div class="p-bar p-bar-stripes">' +
-				 '<span style="width: ' + disk_usage_percentage + 
+				 '<span style="width: ' + serverStats.disk_p + 
 				 '%; background-color: ' + percentageColor + ';"></span>';
 	
-	var diskStatOutput = "Disk Usage: <strong>" + diskSize.used.toFixed(1) + "</strong>" + satuan_used + " of " + 
-			      "<strong>" + diskSize.size.toFixed(1) + "</strong>"  + satuan_size;
+	var diskStatOutput = "Disk Usage: <strong>" + serverStats.disk_u + "</strong> GB of " + 
+			      "<strong>" + serverStats.disk_t + "</strong> GB";
 			      
 	document.getElementById("diskFreePercentage").innerHTML=diskFreePercentage;
 	document.getElementById("diskStatOutput").innerHTML=diskStatOutput;
