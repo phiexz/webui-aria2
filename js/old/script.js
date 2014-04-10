@@ -308,7 +308,7 @@ function newDownload() {
 }
 
 function linkDownloaded() {
-	var newURL = window.location.protocol + "//" + window.location.host + "/files"
+	var newURL = window.location.protocol + "//" + window.location.host + "/files/"
 	location.href=newURL;
 }
 
